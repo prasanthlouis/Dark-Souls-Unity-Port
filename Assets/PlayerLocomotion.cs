@@ -12,6 +12,8 @@ namespace PL
 
         [HideInInspector]
         public Transform myTransform;
+        [HideInInspector]
+        public AnimatorHandler animatorHandler;
 
         public new Rigidbody rigidbody;
         public GameObject normalCamera;
@@ -26,9 +28,11 @@ namespace PL
         {
             rigidbody = GetComponent<Rigidbody>();
             inputHandler = GetComponent<InputHandler>();
+            animatorHandler = GetComponentInChildren<AnimatorHandler>();
+
             cameraObject = Camera.main.transform;
             myTransform = transform;
-
+            animatorHandler.Initialize();
         }
 
         public void Update()
@@ -43,6 +47,12 @@ namespace PL
             moveDirection *= speed;
             Vector3 projectedVelocity = Vector3.ProjectOnPlane(moveDirection, normalVector);
             rigidbody.velocity = projectedVelocity;
+
+            animatorHandler.UpdateAnimatorValues(inputHandler.moveAmount, 0);
+            if (animatorHandler.canRotate)
+            {
+                HandleRotation(delta);
+            }
 
 
         }
