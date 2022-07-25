@@ -22,11 +22,11 @@ namespace PL
         [SerializeField]
         float movementSpeed = 5;
         [SerializeField]
-        float rotationSpeed = 10;
+        float rotationSpeed = 0.001f;
 
         void Start()
         {
-            Application.targetFrameRate = 60;
+
             rigidbody = GetComponent<Rigidbody>();
             inputHandler = GetComponent<InputHandler>();
             animatorHandler = GetComponentInChildren<AnimatorHandler>();
