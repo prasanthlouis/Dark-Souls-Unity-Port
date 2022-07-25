@@ -26,6 +26,7 @@ namespace PL
 
         void Start()
         {
+            Application.targetFrameRate = 60;
             rigidbody = GetComponent<Rigidbody>();
             inputHandler = GetComponent<InputHandler>();
             animatorHandler = GetComponentInChildren<AnimatorHandler>();
@@ -42,6 +43,7 @@ namespace PL
             moveDirection = cameraObject.forward * inputHandler.vertical;
             moveDirection += cameraObject.right * inputHandler.horizontal;
             moveDirection.Normalize();
+            moveDirection.y = 0;
             float speed = movementSpeed;
             moveDirection *= speed;
             Vector3 projectedVelocity = Vector3.ProjectOnPlane(moveDirection, normalVector);

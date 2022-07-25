@@ -14,9 +14,9 @@ namespace PL
         private LayerMask ignoreLayers;
 
         public static CameraHandler singleton;
-        public float lookSpeed = 0.1f;
-        public float followSpeed = 0.1f;
-        public float pivotSpeed = 0.03f;
+        public float lookSpeed = 0.0001f;
+        public float followSpeed = 0.0001f;
+        public float pivotSpeed = 0.00003f;
 
         private float defaultPosition;
         private float lookAngle;
