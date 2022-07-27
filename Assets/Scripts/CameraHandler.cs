@@ -15,9 +15,9 @@ namespace PL
         private Vector3 cameraFollowVelocity = Vector3.zero;
         private Vector3 cameraFollowRotation = Vector3.zero;
         public static CameraHandler singleton;
-        public float lookSpeed = 0.0001f;
-        public float followSpeed = 0.0001f;
-        public float pivotSpeed = 0.00003f;
+        public float lookSpeed = 0.1f;
+        public float followSpeed = 0.1f;
+        public float pivotSpeed = 0.03f;
 
         private float defaultPosition;
         private float lookAngle;
@@ -41,7 +41,7 @@ namespace PL
 
         public void HandleCameraRotation(float delta, float mouseXInput, float mouseYInput)
         {
-            lookAngle += (mouseXInput - mouseYInput) / delta;
+            lookAngle += (mouseXInput * lookSpeed) / delta;
             pivotAngle -= (mouseYInput * pivotSpeed) / delta;
             pivotAngle = Mathf.Clamp(pivotAngle, minimumPivot, maximumPivot);
 

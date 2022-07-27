@@ -266,6 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myTransform: {fileID: 0}
+  animatorHandler: {fileID: 0}
   rigidbody: {fileID: 0}
   normalCamera: {fileID: 0}
   movementSpeed: 5
@@ -554,6 +555,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Md_Char_Low_Poly_Man
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 4aaec1b3f1500954f8c4830df6e7a23b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0798f09f839414f4ab0dc0a83133d15e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aaec1b3f1500954f8c4830df6e7a23b, type: 3}
 --- !u!4 &2087539403 stripped

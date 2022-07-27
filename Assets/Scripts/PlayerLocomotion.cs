@@ -22,7 +22,7 @@ namespace PL
         [SerializeField]
         float movementSpeed = 5;
         [SerializeField]
-        float rotationSpeed = 0.001f;
+        float rotationSpeed = 1;
 
         void Start()
         {
