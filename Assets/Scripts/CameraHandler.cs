@@ -15,9 +15,9 @@ namespace PL
         private Vector3 cameraFollowVelocity = Vector3.zero;
         private Vector3 cameraFollowRotation = Vector3.zero;
         public static CameraHandler singleton;
-        public float lookSpeed = 0.1f;
-        public float followSpeed = 0.1f;
-        public float pivotSpeed = 0.03f;
+        public float lookSpeed = 0.61f;
+        public float followSpeed = 0.61f;
+        public float pivotSpeed = 0.603f;
 
         private float defaultPosition;
         private float lookAngle;
