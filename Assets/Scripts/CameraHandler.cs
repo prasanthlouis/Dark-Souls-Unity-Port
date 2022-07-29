@@ -25,6 +25,10 @@ namespace PL
         public float minimumPivot = -35;
         public float maximumPivot = 35;
 
+        public floast cameraSphereRadius = 0.2f;
+        public floast cameraCollisionOffset = 0.2f;
+        public float minimumCollisionOoffset = 0.2f;
+
         private void Awake()
         {
             singleton = this;
@@ -55,6 +59,12 @@ namespace PL
 
             targetRotation = Quaternion.Euler(rotation);
             cameraPivotTransform.localRotation = targetRotation;
+        }
+
+        private void HandleCameraCollision(float delta)
+        {
+            targetPosition = defaultPosition;
+            RaycastHit hit;
         }
     }
 }
