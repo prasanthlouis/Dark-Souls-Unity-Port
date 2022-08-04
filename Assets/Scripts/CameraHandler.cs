@@ -82,7 +82,7 @@ namespace PL
                 targetPosition = -minimumCollisionOoffset;
             }
 
-            cameraTransformPosition.z = Mathf.Lerp(cameraTransform.localPosition.z, targetPosition, delta / 0.2f);
+            cameraTransformPosition.z = Vector3.SmoothDamp(cameraTransform.localPosition.z, targetPosition, delta / 0.2f);
             cameraTransform.localPosition = cameraTransformPosition;
         }
     }
